@@ -1,0 +1,10 @@
+[package]
+name = "chunk"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4.11.0"
+actix-files = "0.6.8"
+actix-easy-multipart = "3.0.0"
+tokio = { version = "1", features = ["fs"] } 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" 
+		      content="width=device-width, 
+		      initial-scale=1.0">
+
+	</head>
+	<body>
+		<form id="uploadform"
+		      action="/upload" 
+		      enctype="multipart/form-data">
+
+			<label for="fileUpload">Choose File:</label>
+
+			<input type"text" id="fileName" name="file_name">
+
+			<input type="file" id="fileUpload" name="user_file">
+
+			<br><br>
+			<button id="submit_button" type="submit">Upload File</button>
+		</form>
+	</body>
+	
+	<script src="upload-script"> </script>
+</html>
