@@ -1,14 +1,35 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Hello World Page</title>
+    <title>Watch Videos</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em; background-color: #f0f2f5; }
+        h1 { color: #333; }
+        #video-list { list-style: none; padding: 0; }
+        #video-list li { background: white; margin: 0.5em 0; padding: 1em; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        #video-list a { text-decoration: none; color: #007bff; font-weight: bold; cursor: pointer; }
+        #video-list a:hover { text-decoration: underline; }
+        #video-player-container { margin-top: 2em; text-align: center; }
+        video { max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .back-link { display: inline-block; margin-bottom: 2em; text-decoration: none; color: #555; }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    
-    <p>This is a basic HTML5 document.</p>
+    <a href="/" class="back-link">← Back to Home</a>
+    <h1>Watch Uploaded Videos</h1>
+
+    <div id="status">Loading videos...</div>
+    <ul id="video-list"></ul>
+
+    <div id="video-player-container">
+        <!-- The video player will be controlled by JavaScript -->
+        <video id="video-player" controls style="display: none;" width="800">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script src="watch-script"></script>
 </body>
 </html>

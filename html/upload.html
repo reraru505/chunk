@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" 
-		      content="width=device-width, 
-		      initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large File Upload</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 2em auto; }
+        form { display: flex; flex-direction: column; gap: 1em; }
+        input, button { padding: 0.8em; font-size: 1em; }
+        #status { margin-top: 1em; font-weight: bold; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Large File Upload</h1>
+    <p>This form can handle files up to 5GB.</p>
 
-	</head>
-	<body>
-		<form id="uploadform"
-		      action="/upload" 
-		      enctype="multipart/form-data">
+    <form id="uploadform" enctype="multipart/form-data">
+        <label for="fileName">Custom File Name (optional):</label>
+        <!-- CORRECTED: Added proper type attribute -->
+        <input type="text" id="fileName" name="file_name" placeholder="e.g., my-awesome-video.mp4">
 
-			<label for="fileUpload">Choose File:</label>
+        <label for="fileUpload">Choose File:</label>
+        <!-- CORRECTED: Changed name to "file" to match the Rust struct -->
+        <input type="file" id="fileUpload" name="file" required>
 
-			<input type"text" id="fileName" name="file_name">
+        <button id="submit_button" type="submit">Upload File</button>
+    </form>
 
-			<input type="file" id="fileUpload" name="user_file">
+    <!-- Added for user feedback -->
+    <div id="status"></div>
 
-			<br><br>
-			<button id="submit_button" type="submit">Upload File</button>
-		</form>
-	</body>
-	
-	<script src="upload-script"> </script>
+    <!-- CORRECTED: Link to the JavaScript file -->
+    <script src="/upload-script"></script>
+</body>
 </html>

@@ -1,14 +1,25 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Hello World Page</title>
+    <title>Video Hub</title>
+    <style>
+        body { font-family: sans-serif; display: grid; place-items: center; height: 100vh; margin: 0; background-color: #f0f2f5; }
+        .container { text-align: center; background: white; padding: 2rem 3rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        a { display: inline-block; margin: 1rem; padding: 1rem 2rem; font-size: 1.2rem; text-decoration: none; border-radius: 5px; color: white; transition: transform 0.2s; }
+        a:hover { transform: scale(1.05); }
+        .upload-btn { background-color: #007bff; }
+        .watch-btn { background-color: #28a745; }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    
-    <p>This is a basic HTML5 document.</p>
+    <div class="container">
+        <h1>Welcome to Video Hub</h1>
+        <p>What would you like to do?</p>
+        <a href="/upload" class="upload-btn">Upload a Video</a>
+        <a href="/watch" class="watch-btn">Watch Videos</a>
+    </div>
 </body>
 </html>
